@@ -11,4 +11,4 @@ To use TexShop as your editor for GLE:
 4. Add the following shebang to the top of your .tex file: `% !TEX TS-program = gle`
 5. Write some GLE code and then Typeset and voila!
 
-https://user-images.githubusercontent.com/6877923/123006036-64e2e780-d3b7-11eb-922e-018994b32da5.mov
+https://github.com/paul-goodall/GLE_TexShop/blob/main/HowTo_GLE_TexShop.mp4

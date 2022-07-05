@@ -1,4 +1,4 @@
-# GLE_TexShop
+# Use TexShop for GLE editing
 
 ## INSTRUCTIONS
 

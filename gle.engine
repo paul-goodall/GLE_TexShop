@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# INSTRUCTIONS
+# 1. Ammend 'gle_path' below to reflect the gle binary
+# 2. copy this gle.engine file into the TexShop Engines dir (on a Mac this is ~/Library/TeXShop/Engines/gle.engine)
+# 3. Create a .tex file (not a .gle file) and open with TexShop
+# 4. Add the following shebang to the top of your .tex file: '% !TEX TS-program = gle'
+# 5. Write some GLE code and then Typeset and voila!
+
+gle_path=/Volumes/Abyss/Dropbox/my_Computer/gle-4.3.2-Darwin/bin/gle
+
+tex_file="$1"
+gle_file=${tex_file%.*}_tmp.gle
+pdf_file1=${gle_file%.*}.pdf
+pdf_file2=${tex_file%.*}.pdf
+/usr/bin/tail -n +2 $tex_file > $gle_file
+echo $tex_file
+echo $gle_file
+echo $pdf_file
+$gle_path -d pdf $gle_file
+mv $pdf_file1 $pdf_file2
+echo "Sucess!"
